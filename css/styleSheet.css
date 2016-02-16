@@ -1,13 +1,17 @@
 header{
-height: 50px;
+height: 100px;
 width: 100%;
 background-color: rgba(255, 0, 0, 0.5);
 font-size: 2em;
 color: white;
+position:fixed;
+padding:50px,0,50px,0;
+top: 0px;
 }
 li{
 float: left;
-width: 30%;
+width: 24%;
 color: inherit;
-margin-left: 3%;
+margin-left: 9%;
+right: 250px;
 }
