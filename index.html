@@ -1,21 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="ui.bootstrap.demo">
+
   <head>
     <meta charset="utf-8">
-    <title>
-  </title>
+    <title>Joe Gorsick | Child Advocate</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.1.js"></script>
+    <script src="test.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   </head>
-  <body>
-    <div class="container">
-      <header>
-        <link rel="stylesheet" href="css/normalize.css">
+
+<body>
+
+      <header class="main-header">
+        <div class="container">
+        <link rel="stylesheet" href="normalize.css/normalize.css">
         <link rel="stylesheet" href="css/stylesheet.css">
         <ul>
-          <li>Educate</li>
-          <li>Advocate</li>
-          <li>Legislate</li>
+          <li class='button'>Educate</li>
+          <li class='button'>Demonstrate</li>
+          <li class='button'>Advocate</li>
         </ul>
+        </div>
       </header>
+
+
+    <div ng-controller="CarouselDemoCtrl">
+      <div class= "snapshot" style="height: 325px">
+        <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+          <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+            <img ng-src="{{slide.image}}" style="margin:auto;">
+            <div class="carousel-caption">
+              <h4>Slide {{slide.id}}</h4>
+              <p>{{slide.text}}</p>
+            </div>
+          </uib-slide>
+        </uib-carousel>
+      </div>
     </div>
   </body>
+  <footer></footer>
+
 </html>
