@@ -11,30 +11,27 @@
     <script src="test.js"></script>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   </head>
-
-<body>
-
-      <header class="main-header">
-        <div class="container">
-        <link rel="stylesheet" href="normalize.css/normalize.css">
-        <link rel="stylesheet" href="css/stylesheet.css">
-        <ul>
-          <li class='button'>Educate</li>
-          <li class='button'>Demonstrate</li>
-          <li class='button'>Advocate</li>
-        </ul>
-        </div>
-      </header>
-
+  <body>
+    <div class="container-fluid">
+        <header class="navbar navbar-default navbar-fixed-top navbar-inner">
+                <link rel="stylesheet" href="normalize.css/normalize.css">
+                <link rel="stylesheet" href="css/stylesheet.css">
+                <ul class='container-fluid'>
+                  <li id='cf'><button class='btn'>Educate</button></li>
+                  <li id='cf'><button class='btn'>Demonstrate</button></li>
+                  <li id='cf'><button class='btn'>Advocate</button></li>
+                </ul>
+        </header>
+    </div>
 
     <div ng-controller="CarouselDemoCtrl">
       <div class= "snapshot" style="height: 325px">
         <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
           <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-            <img ng-src="{{slide.image}}" style="margin:auto;">
+              <img ng-src="{{slide.image}}" style="margin:auto;">
             <div class="carousel-caption">
-              <h4>Slide {{slide.id}}</h4>
-              <p>{{slide.text}}</p>
+                <h4>Slide {{slide.id}}</h4>
+                <p>{{slide.text}}</p>
             </div>
           </uib-slide>
         </uib-carousel>
