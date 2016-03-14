@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--This is my app reference-->
+<html ng-app='ui.bootstrap.demo'>
+<!--***************************-->
+  <head>
+    <meta charset="utf-8">
+    <title>Joe Gorsick | Child Advocate</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic' rel='stylesheet' type='text/css'>
+
+<!--*********************These are my angular references ***********************-->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.1.js"></script>
+    <script src="test.js"></script>
+      <script src="js/demo.js"></script>
+      <script src="js/buttons.js"></script>
+  <!---**********************************************************************----->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="normalize.css/normalize.css">-->
+    <link rel="stylesheet" href="css/ui-bootstrap-csp.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+    <body>
+      </head>
+      <div ng-controller="ButtonsCtrl">
+          <h4>Single toggle</h4>
+          <pre>{{singleModel}}</pre>
+          <button type="button" class="btn btn-primary" ng-model="singleModel" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
+              Single Toggle
+          </button>
+          <h4>Checkbox</h4>
+          <pre>Model: {{checkModel}}</pre>
+          <pre>Results: {{checkResults}}</pre>
+          <div class="btn-group">
+              <label class="btn btn-primary" ng-model="checkModel.left" uib-btn-checkbox>Left</label>
+              <label class="btn btn-primary" ng-model="checkModel.middle" uib-btn-checkbox>Middle</label>
+              <label class="btn btn-primary" ng-model="checkModel.right" uib-btn-checkbox>Right</label>
+          </div>
+          <h4>Radio &amp; Uncheckable Radio</h4>
+          <pre>{{radioModel || 'null'}}</pre>
+          <div class="btn-group">
+              <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Left'">Left</label>
+              <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Middle'">Middle</label>
+              <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Right'">Right</label>
+          </div>
+          <div class="btn-group">
+              <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Left'" uncheckable>Left</label>
+              <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Middle'" uncheckable>Middle</label>
+              <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Right'" uib-uncheckable="uncheckable">Right</label>
+          </div>
+          <div>
+              <button class="btn btn-default" ng-click="uncheckable = !uncheckable">
+                  Toggle uncheckable
+              </button>
+          </div>
+      </div>
+<!--***************** This is my controller **************************-->
+  <!--  <div ng-controller="CarouselDemoCtrl">
+ **********************************************
+
+      <div class= "snapshot" style="height: 325px">
+        <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+          <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+              <img ng-src="{{slide.image}}" style="margin:auto;">
+            <div class="carousel-caption">
+                <h4>Slide {{slide.id}}</h4>
+                <p>{{slide.text}}</p>
+            </div>
+          </uib-slide>
+        </uib-carousel>
+      </div>
+    </div> -->
+  </body>
+  <footer></footer>
+
+</html>

@@ -1,43 +1,56 @@
 <!DOCTYPE html>
-<html ng-app="ui.bootstrap.demo">
+<!--This is my app reference-->
+<html ng-app='ui.bootstrap.demo'>
+<!--***************************-->
+    <head>
+      <meta charset="utf-8">
+      <title>Joe Gorsick | Child Advocate</title>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic' rel='stylesheet' type='text/css'>
 
-  <head>
-    <meta charset="utf-8">
-    <title>Joe Gorsick | Child Advocate</title>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic' rel='stylesheet' type='text/css'>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
-    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.1.js"></script>
-    <script src="test.js"></script>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-  </head>
-  <body>
-    <div class="container-fluid">
+  <!--*********************These are my angular references ***********************-->
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
+      <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.1.js"></script>
+      <script src="test.js"></script>
+      <script src="js/demo.js"></script>
+      <script src="js/buttons.js"></script>
+      <!--<script src="bG.js"></script>-->
+    <!---**********************************************************************----->
+
+      <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="normalize.css/normalize.css">
+      <link rel="stylesheet" href="css/bootstrap.css">
+      <link rel="stylesheet" href="css/stylesheet.css">
+    </head>
+         <!--<link rel="stylesheet" href="css/stylesheet.css">-->
+         <!--<div id= bg ng-style="{'background-image':'url(protest.png)'}"></div>-->
+      <body>
         <header class="navbar navbar-default navbar-fixed-top navbar-inner">
-                <link rel="stylesheet" href="normalize.css/normalize.css">
-                <link rel="stylesheet" href="css/stylesheet.css">
-                <ul class='container-fluid'>
-                  <li id='cf'><button class='btn'>Educate</button></li>
-                  <li id='cf'><button class='btn'>Demonstrate</button></li>
-                  <li id='cf'><button class='btn'>Advocate</button></li>
-                </ul>
-        </header>
-    </div>
-
-    <div ng-controller="CarouselDemoCtrl">
-      <div class= "snapshot" style="height: 325px">
-        <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-          <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-              <img ng-src="{{slide.image}}" style="margin:auto;">
-            <div class="carousel-caption">
-                <h4>Slide {{slide.id}}</h4>
-                <p>{{slide.text}}</p>
+            <div ng-controller="ButtonsCtrl">
+                <div class=container-fluid>
+                  <label id='l' class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Left'">Educate</label>
+                  <label id='c' class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'left'">Demonstrate</label>
+                  <label id='r' class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Right'">Advocate</label>
+                </div>
             </div>
-          </uib-slide>
-        </uib-carousel>
-      </div>
-    </div>
-  </body>
+          </header>
+          
+    <!--***************** This is my controller  **************************
+        <div ng-controller="CarouselDemoCtrl">
+
+          <div class= "snapshot" style="height: 325px">
+            <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+              <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                <img ng-src="{{slide.image}}" style="margin:auto;">
+                  <div class="carousel-caption">
+                      <h4>Slide {{slide.id}}</h4>
+                      <p>{{slide.text}}</p>
+                  </div>
+              </uib-slide>
+            </uib-carousel>
+          </div>
+        </div>-->
+      </body>
   <footer></footer>
 
 </html>

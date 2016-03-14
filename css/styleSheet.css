@@ -1,3 +1,10 @@
+#bg{
+	min-height: 1024px;
+	max-width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 
 
 .navbar{
@@ -12,30 +19,26 @@ border-color:silver;
 border-radius: 10px;
 border-style: outset;
 border-width: medium;
-margin: 0 .3em;
+margin: .3em .3em;
 background-color: rgb(47, 20, 189);
 width: auto;
 font-size: .9em;
-}
-
-.snapshot{
-padding-top: 4.2em;
-width: 100%;}
-
-ul{
-padding-top: .75em;
-}
-
-
-#cf{
 display: inline-block;
 width: auto;
 text-align: center;
 font-family: inherit;
 font-weight: bold;
 color:white;
-float:left;
+float: left;
 
+}
+
+.snapshot{
+padding-top: 4.2em;
+width: 100%;}
+
+label{
+padding-top: .75em;
 }
 
 footer{
@@ -55,23 +58,18 @@ text-align: center;
 .navbar{
 height: 5.6em;}
 
-#cf{
-display:inline-flex;
-font-family: cursive;
-float:none;}
-}
 /*--------@media--960----------------*/
 @media (min-width: 1200px) {
 
 
-	.snapshot{
-	padding-top: 6.7em;}
+.snapshot{
+padding-top: 6.7em;}
 
 .navbar{
 height: 6.6em;}
 
 .btn{
-margin: 0 1em;
+margin: .3em 1em;
 font-size: 2.5em;
 }
 
